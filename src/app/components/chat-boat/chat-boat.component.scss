@@ -1,0 +1,39 @@
+mat-toolbar {
+    justify-content: center;
+}
+
+.chat_messages {
+    height: calc(100% - 172px);
+    padding: 20px;
+    overflow: auto;
+}
+
+.chat_textarea {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.chat_textarea mat-form-field {
+    width: 100%;
+}
+
+.message {
+    display: flex;
+    margin: 10px 0;
+}
+
+.right_message {
+    justify-content: flex-end;
+}
+
+.message mat-card {
+    max-width: 60%;
+    overflow-wrap: break-word;
+}
+
+.message_time {
+    font-size: 10px;
+    color: darkgray;
+    margin-top: 10px;
+}

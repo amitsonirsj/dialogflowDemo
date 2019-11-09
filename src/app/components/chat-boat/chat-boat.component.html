@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <mat-icon>message</mat-icon>
+</mat-toolbar>
+<div id="chat_messages" class="chat_messages">
+    <div class="message" *ngFor="let message of messages" [ngClass]="{'right_message': message.type=='sender'}">
+        <mat-card>
+            <div>{{message?.message}}</div>
+            <div class="message_time">{{message?.time}}</div>
+        </mat-card>
+    </div>
+</div>
+<div class="chat_textarea">
+    <mat-form-field appearance="outline">
+        <input matInput [(ngModel)]="textMessage" (keyup.enter)="sendMessage(textMessage)">
+        <mat-icon matSuffix color="primary" (click)="sendMessage(textMessage)">send</mat-icon>
+    </mat-form-field>
+</div>
